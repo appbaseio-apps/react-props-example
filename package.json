@@ -10,9 +10,8 @@
     "build": "webpack -p"
   },
   "author": {
-    "name": "Deepak Grover",
-    "email": "deepak@appbase.io",
-    "url": "https://github.com/metagrover"
+    "name": "Saurabh Shah",
+    "url": "https://github.com/shahsaurabh0605"
   },
   "license": "MIT",
   "devDependencies": {
