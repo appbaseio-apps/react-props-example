@@ -63,8 +63,8 @@ class Main extends Component {
 		return (
 			<div className="row grey lighten-3">
 				<ReactiveBase
-					app="Twitter-Map1"
-					credentials="AK9umsLlD:e71ac3b4-2886-4ede-b41f-866ffa98b154"
+					app="Geo-Location-Tweets"
+					credentials="xf6lxKyyK:e18f20e9-e95d-4173-a1a9-63f947320f45"
 					type="new_data"
 					>
 					<div className="col s12 col-xs-12 col-sm-6" style={{ "marginTop": "20px" }}>
