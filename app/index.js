@@ -23,7 +23,7 @@ class Main extends Component {
 				target="_blank">
 				<div className="row">
 					<div className="col s2">
-						<img src={marker.user.profile_image_url} />
+						<img src={marker.user.profile_image_url_https} width="80px"/>
 					</div>
 					<div className="col s10">
 						<div>
@@ -47,7 +47,7 @@ class Main extends Component {
 				target="_blank">
 				<div className="row" style={{ "marginBottom": "-10px", "marginTop": "10px" }}>
 					<div className="col s2">
-						<img src={marker.user.profile_image_url} width={80} />
+						<img src={marker.user.profile_image_url_https}  />
 					</div>
 					<div className="col s10">
 						<div>
@@ -101,11 +101,11 @@ class Main extends Component {
 						<div className="col s6">
 							<ReactiveMap
 								appbaseField="location"
-								historicalData={true}
 								setMarkerCluster={false}
 								defaultMapStyle="Blue Water"
 								popoverTTL={3}
 								autoCenter={true}
+								size={1000}
 								defaultMarkerImage="/geo-location-tweets-frontend/assets/twitter.png"
 								showSearchAsMove={true}
 								showMapStyles={true}
