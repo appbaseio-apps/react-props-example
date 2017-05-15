@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
+import moment from 'moment';
 import {
 	ReactiveBase,
 	ReactiveMap,
@@ -25,9 +26,11 @@ class Main extends Component {
 						<img src={marker.user.profile_image_url} />
 					</div>
 					<div className="col s10">
-						<span>
-							<strong>{marker.user.name}</strong>
-						</span>
+						<div>
+							<span className="black-text text-darken-4" >{marker.user.screen_name} </span>
+							<span style={{ "float": "right" }}>{(new moment(marker.created_at)).fromNow()}</span>
+						</div>
+
 						<div>
 							<p>{marker.text}</p>
 						</div>
@@ -48,8 +51,10 @@ class Main extends Component {
 					</div>
 					<div className="col s10">
 						<div>
-							<span className="black-text text-darken-4">{marker.user.screen_name}</span>
+							<span className="black-text text-darken-4" >{marker.user.screen_name} </span>
+							<span style={{ "float": "right" }}>{(new moment(marker.created_at)).fromNow()}</span>
 						</div>
+
 						<div>
 							<p>{marker.text}</p>
 						</div>
@@ -92,21 +97,26 @@ class Main extends Component {
 						</div>
 					</div>
 
-					<div className="col s12">
+					<div className="col s12" style={{ "maxHeight": "1000px", "height": "100%", "overflow": "hidden" }}>
 						<div className="col s6">
 							<ReactiveMap
 								appbaseField="location"
 								historicalData={true}
 								setMarkerCluster={false}
+								defaultMapStyle="Blue Water"
 								popoverTTL={3}
 								autoCenter={true}
+								defaultMarkerImage="../assets/twitter.png"
 								showSearchAsMove={true}
 								showMapStyles={true}
 								title="Reactive Maps"
 								onPopoverTrigger={this.onPopoverTrigger}
-								defaultZoom={7}
+								defaultZoom={13}
 								react={{
 									and: "GeoDistanceDropdown"
+								}}
+								componentStyle={{
+									height: '550px'
 								}}
 								/>
 						</div >
@@ -125,6 +135,9 @@ class Main extends Component {
 								onData={this.onData}
 								react={{
 									and: "GeoDistanceDropdown"
+								}}
+								componentStyle={{
+									height: '550px'
 								}}
 								/>
 						</div>

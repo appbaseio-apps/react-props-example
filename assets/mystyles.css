@@ -2,3 +2,12 @@
     width: 50%
 }
 
+body{
+overflow-y:hidden;
+}
+
+/*div{
+max-height: 500px;
+height: 100%;
+}*/
+
