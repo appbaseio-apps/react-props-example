@@ -106,7 +106,7 @@ class Main extends Component {
 								defaultMapStyle="Blue Water"
 								popoverTTL={3}
 								autoCenter={true}
-								defaultMarkerImage="../assets/twitter.png"
+								defaultMarkerImage="/geo-location-tweets-frontend/assets/twitter.png"
 								showSearchAsMove={true}
 								showMapStyles={true}
 								title="Reactive Maps"
