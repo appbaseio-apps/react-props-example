@@ -16,7 +16,7 @@ class Sensor extends Component {
 						<GeoDistanceDropdown
 							componentId="LocationSensor"
 							appbaseField="location"
-							title="GeoDistanceDropdown: Range Filter"
+							title="LocationSensor"
 							unit="mi"
 							data={
 									[
@@ -34,7 +34,7 @@ class Sensor extends Component {
 							<MultiList
 							  componentId="CitySensor"
 							  appbaseField="group.group_city"
-							  title="MultiList: City Filter"
+							  title="CitySensor"
 							  size={100}
 							  sortBy="asc"
 							  defaultSelected={["London"]}
@@ -50,7 +50,7 @@ class Sensor extends Component {
 							<NumberBox
 							  componentId="GuestSensor"
 							  appbaseField="guests"
-							  title="NumberBox component"
+							  title="GuestSensor"
 							  data={{ "label": "Guests", "start": 0, "end": 5 }}
 							  defaultSelected={0}
 							  labelPosition="left"
@@ -59,7 +59,7 @@ class Sensor extends Component {
 							<DateRange
 							  componentId="TimeSensor"
 							  appbaseField="mtime"
-							  title="DatePicker"
+							  title="TimeSensor"
 							  numberOfMonths={1}
 							  allowAllDates={true}
 							/>
