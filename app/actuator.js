@@ -10,7 +10,15 @@ class Actuator extends Component {
 	constructor(props) {
 		super(props);
     this.updateCode = this.updateCode.bind(this);
-    this.state = ({code: `{"and": "TimeSensor"}`})
+		// if(props.path == '/' || props.path =='/1'){
+		this.state = ({code: `{"and": "TimeSensor"}`})
+		// }
+		// else if(props.path == '/2'){
+		// 			this.state = ({code: `{"and": "CitySensor"}`})
+		// }
+		// else if(props.path == '/3'){
+		// 			this.state = ({code: `{"and": "GuestSensor"}`})
+		// }
 	}
 
   updateCode(newCode) {
@@ -20,6 +28,19 @@ class Actuator extends Component {
   }
 
 	render() {
+		if(this.props.path == '/' || this.props.path =='/1'){
+					this.updateCode(`{"and": "LocationSensor"}`)
+					// this.state = ({code: `{"and": "LocationSensor"}`})
+		}
+		else if(this.props.path == '/2'){
+					this.updateCode(`{"and": "CitySensor"}`)
+					// this.state = ({code: `{"and": "CitySensor"}`})
+		}
+		else if(this.props.path == '/3'){
+					this.updateCode(`{"and": "GuestSensor"}`)
+					// this.state = ({code: `{"and": "GuestSensor"}`})
+		}
+debugger;
 		return (
 			<div>
 			<div className="row">
@@ -34,7 +55,7 @@ class Actuator extends Component {
 								size={1000}
 								showSearchAsMove={true}
 								showMapStyles={true}
-								title="Reactive maps"
+								title="ReactiveMaps"
 								defaultZoom={13}
 								react={JSON.parse(this.state.code)}
 								componentStyle={{
@@ -45,7 +66,8 @@ class Actuator extends Component {
 						</div>
             </div>
             <div className="card thumbnail">
-            <div>
+            <div key={this.state.code}>
+
             	<label className="labelclass">react:</label>
 
             <CodeMirror

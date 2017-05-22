@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
 import ReactDom from "react-dom";
-import { Router, Route, browserHistory } from "react-router";
+import { Router, Link, Route, browserHistory } from "react-router";
 import { ReactiveBase } from "@appbaseio/reactivemaps";
 import {config} from './config.js'
 import {Sensor} from './sensor.js'
 import {Actuator} from './actuator.js'
 class Dashboard extends Component {
   render() {
+  // debugger;
     return (
       <div className="row">
          <nav>
     <div className="nav-wrapper row grey lighten-3">
       <label className="brand-logo center">React Props Example</label>
       <ul id="nav-mobile" className="left hide-on-med-and-down">
-        <li><a href="sass.html">Actuator1</a></li>
-        <li><a href="badges.html">Actuator2</a></li>
-        <li><a href="collapsible.html">Actuator3</a></li>
+
+        <li><Link to={"/1"}>Example1</Link></li>
+        <li><Link to={"/2"}>Example2</Link></li>
+        <li><Link to={"/3"}>Example3</Link></li>
+
       </ul>
     </div>
   </nav>
@@ -24,7 +27,9 @@ class Dashboard extends Component {
           <Sensor />
         </div>
         <div className="col s6">
-          <Actuator />
+          <Actuator
+            path={this.props.location.pathname}
+            />
         </div>
         </div>
       </div>
