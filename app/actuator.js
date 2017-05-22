@@ -20,7 +20,7 @@ class Actuator extends Component {
   }
 
 	render() {
-
+	debugger;
 		return (
 			<div>
 			<div className="row grey lighten-3">

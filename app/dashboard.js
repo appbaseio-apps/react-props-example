@@ -5,7 +5,7 @@ import { ReactiveBase } from "@appbaseio/reactivemaps";
 import {config} from './config.js'
 import {Sensor} from './sensor.js'
 import {Actuator} from './actuator.js'
-class Main extends Component {
+class Dashboard extends Component {
   render() {
     return (
       <div className="row">
@@ -19,4 +19,7 @@ class Main extends Component {
     );
   }
 }
-ReactDom.render(<Main />, document.getElementById('app'));
+
+module.exports = {
+Dashboard
+};
