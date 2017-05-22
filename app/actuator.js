@@ -28,19 +28,19 @@ class Actuator extends Component {
   }
 
 	render() {
-		if(this.props.path == '/' || this.props.path =='/1'){
+		if(this.props.path == '/react-props-example/' || this.props.path =='/react-props-example/1'){
 					this.updateCode(`{"and": "LocationSensor"}`)
 					// this.state = ({code: `{"and": "LocationSensor"}`})
 		}
-		else if(this.props.path == '/2'){
+		else if(this.props.path == '/react-props-example/2'){
 					this.updateCode(`{"and": "CitySensor"}`)
 					// this.state = ({code: `{"and": "CitySensor"}`})
 		}
-		else if(this.props.path == '/3'){
+		else if(this.props.path == '/react-props-example/3'){
 					this.updateCode(`{"and": "GuestSensor"}`)
 					// this.state = ({code: `{"and": "GuestSensor"}`})
 		}
-debugger;
+
 		return (
 			<div>
 			<div className="row">
