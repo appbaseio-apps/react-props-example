@@ -42,9 +42,9 @@ class Sensor extends Component {
 							  showSearch={true}
 							  searchPlaceholder="Search City"
 							  initialLoader="Loading cities list.."
-                componentStyle={{
-                  height: '300px'
-                }}
+				                componentStyle={{
+				                  height: '300px'
+				                }}
 							/>
 
 							<NumberBox

@@ -20,9 +20,11 @@ class Actuator extends Component {
   }
 
 	render() {
-	// debugger;
+
 		return (
+			<div>
 			<div className="row grey lighten-3">
+
 						<div key={this.state.code}>
 							<ReactiveMap
 								appbaseField="location"
@@ -42,11 +44,17 @@ class Actuator extends Component {
 								/>
 
 						</div>
+            </div>
+            <div className="card thumbnail">
+            <h5 className="rbc-title col s12 col-xs-12">Custom React Prop</h5>
             <div>
+            	<label className="labelclass">react:</label>
+
             <CodeMirror
               value={this.state.code}
               onChange={this.updateCode}
               />
+              </div>
               </div>
 			</div>
 		);
