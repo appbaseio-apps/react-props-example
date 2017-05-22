@@ -22,7 +22,7 @@ class Actuator extends Component {
 	render() {
 		return (
 			<div>
-			<div className="row grey lighten-3">
+			<div className="row">
 
 						<div key={this.state.code}>
 							<ReactiveMap
@@ -45,7 +45,6 @@ class Actuator extends Component {
 						</div>
             </div>
             <div className="card thumbnail">
-            <h5 className="rbc-title col s12 col-xs-12">Custom React Prop</h5>
             <div>
             	<label className="labelclass">react:</label>
 
