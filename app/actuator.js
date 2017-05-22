@@ -20,11 +20,7 @@ class Actuator extends Component {
   }
 
 	render() {
-
-    var options = {
-      lineNumbers: true,
-    };
-
+	// debugger;
 		return (
 			<div className="row grey lighten-3">
 						<div key={this.state.code}>
@@ -37,7 +33,7 @@ class Actuator extends Component {
 								size={1000}
 								showSearchAsMove={true}
 								showMapStyles={true}
-								title="Reactive Maps"
+								title="Reactive maps"
 								defaultZoom={13}
 								react={JSON.parse(this.state.code)}
 								componentStyle={{
@@ -45,12 +41,11 @@ class Actuator extends Component {
 								}}
 								/>
 
-						</div >
+						</div>
             <div>
             <CodeMirror
               value={this.state.code}
               onChange={this.updateCode}
-              options={options}
               />
               </div>
 			</div>
