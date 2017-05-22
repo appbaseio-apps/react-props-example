@@ -20,7 +20,7 @@ class Actuator extends Component {
   }
 
 	render() {
-	debugger;
+	// debugger;
 		return (
 			<div>
 			<div className="row grey lighten-3">
@@ -35,7 +35,7 @@ class Actuator extends Component {
 								size={1000}
 								showSearchAsMove={true}
 								showMapStyles={true}
-								title="Reactive maps"
+								title="ReactiveMaps"
 								defaultZoom={13}
 								react={JSON.parse(this.state.code)}
 								componentStyle={{

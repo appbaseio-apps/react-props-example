@@ -7,13 +7,16 @@ import {Sensor} from './sensor.js'
 import {Actuator} from './actuator.js'
 class Dashboard extends Component {
   render() {
+// debugger;
     return (
       <div className="row">
         <div className="col s4">
           <Sensor />
         </div>
         <div className="col s6">
-          <Actuator />
+          <Actuator
+            path={this.props.location.pathname}
+            />
         </div>
       </div>
     );
