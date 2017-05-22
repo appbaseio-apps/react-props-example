@@ -1,13 +1,15 @@
-.rbc.rbc-geodistancedropdown .row > .col.s12{
-    width: 50%
+
+
+.row .col {
+  margin: 1% auto auto 1.5% !important;
 }
 
-body{
-overflow-y:hidden;
+.rbc {
+  margin-bottom: 2%;
 }
 
-/*div{
-max-height: 500px;
-height: 100%;
-}*/
-
+.CodeMirror.cm-s-default {
+    position: absolute;
+    margin-top: 38%;
+    height: 238px;
+}
