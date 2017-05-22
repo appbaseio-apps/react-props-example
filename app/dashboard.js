@@ -15,9 +15,9 @@ class Dashboard extends Component {
       <label className="brand-logo center">React Props Example</label>
       <ul id="nav-mobile" className="left hide-on-med-and-down">
 
-        <li><Link to={"/1"}>Example1</Link></li>
-        <li><Link to={"/2"}>Example2</Link></li>
-        <li><Link to={"/3"}>Example3</Link></li>
+        <li><Link to={"/react-props-example/1"}>Example1</Link></li>
+        <li><Link to={"/react-props-example/2"}>Example2</Link></li>
+        <li><Link to={"/react-props-example/3"}>Example3</Link></li>
 
       </ul>
     </div>
