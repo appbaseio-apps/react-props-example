@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDom from "react-dom";
 import { Router, Link, Route, browserHistory } from "react-router";
 import { ReactiveBase } from "@appbaseio/reactivemaps";
 import {config} from './config.js'

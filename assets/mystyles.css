@@ -28,7 +28,6 @@
 }
 
 
-
 strong {
 	font-weight: bold;
 }
@@ -47,6 +46,23 @@ code {
 	margin: 2% 2% 2% 2%;	
 }
 
+.flexend {
+	margin: 2%;
+	display: flex;
+}
+
+input.reacttxt {
+width: 259px;
+}
+
+.edit {
+	height: 100px;
+}
+
+.reacttxt {
+	width: 259px;
+}
+
 .labelclass {
 	display: table-cell;
     box-sizing: border-box;
@@ -60,6 +76,12 @@ code {
     color: rgb(68, 68, 68);
     text-transform: uppercase;
     font-weight: 600;
+}
+
+.tableclass {
+	display: table-cell;
+    box-sizing: border-box;
+    vertical-align: middle;
 }
 
 .CodeMirror-lines{ 
