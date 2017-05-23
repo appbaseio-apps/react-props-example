@@ -21,32 +21,60 @@ class Actuator extends Component {
 		// }
 	}
 
+	componentWillMount(){
+		// debugger;
+		// if (this.props.path == '/' || this.props.path == '/1') {
+		// 	// this.updateCode(`{"and": "LocationSensor"}`)
+		// 	this.state = ({code: `{"and": "LocationSensor"}`})
+		// }
+		// else if (this.props.path == '/2') {
+		// 	// this.updateCode(`{"and": "CitySensor"}`)
+		// 	this.state = ({code: `{"and": "CitySensor"}`})
+		// }
+		// else if (this.props.path == '/3') {
+		// 	// this.updateCode(`{"and": "GuestSensor"}`)
+		// 	this.state = ({code: `{"and": "GuestSensor"}`})
+
+		// }
+	}
+	componentDidMount(){
+		debugger;
+	}
+
 	updateCode(newCode) {
 		this.setState({
-			code: newCode
+			code: newCode,
+			path:this.props.path
 		});
 	}
 
 	render() {
-		var self =this;
-		// if (this.props.path == '/' || this.props.path == '/1') {
-		// 	this.updateCode(`{"and": "LocationSensor"}`)
-		// 	// this.state = ({code: `{"and": "LocationSensor"}`})
-		// }
-		// else if (this.props.path == '/2') {
-		// 	this.updateCode(`{"and": "CitySensor"}`)
-		// 	// this.state = ({code: `{"and": "CitySensor"}`})
-		// }
-		// else if (this.props.path == '/3') {
-		// 	this.updateCode(`{"and": "GuestSensor"}`)
-		// 	// this.state = ({code: `{"and": "GuestSensor"}`})
+		// debugger;
+		if (this.props.path == '/' || this.props.path == '/1') {
+			// this.updateCode(`{"and": "LocationSensor"}`)
+			if( this.props.path !== this.state.path){
+				this.state = ({code: `{"and": "LocationSensor"}`})
+			}
+		}
+		else if (this.props.path == '/2') {
+			// this.updateCode(`{"and": "CitySensor"}`)
+			if( this.props.path !== this.state.path){
+				this.state = ({code: `{"and": ["CitySensor","GuestSensor"],
+										"not": "TimeSensor"}`})
+			}
+		}
+		else if (this.props.path == '/3') {
+			// this.updateCode(`{"and": "GuestSensor"}`)
+			if( this.props.path !== this.state.path){
+				this.state = ({code: `{"or": ["GuestSensor","CitySensor"]}`})
+			}
 
-		// }
+		}
 
 		return (
-			<div key={this.state.code}>
+			<div>
 				<div className="row">
-					<div>
+					<div  key={this.state.code}>
 						<ReactiveMap
 							appbaseField="location"
 							setMarkerCluster={false}
@@ -66,7 +94,7 @@ class Actuator extends Component {
 
 					</div>
 				</div>
-				<div className="card thumbnail edit">
+				<div className="card thumbnail edit"  key={this.state.code}>
 						<label className="labelclass">react:</label>
 						<div className="tableclass">
 						<Edit
