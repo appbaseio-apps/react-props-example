@@ -26,7 +26,7 @@ class Edit extends Component {
     renderForm() {
         return (
             <div className="flexend">
-                <input className="reacttxt" type='text' ref={(i) => this.inputval = i} defaultValue={this.props.text} />
+                <textarea className="reacttxt" type='text' ref={(i) => this.inputval = i} defaultValue={this.props.text} />
                 <button className="btn btn-success alr" onClick={this.saveEditedNote}>
                     <i className="fa fa-floppy-o" aria-hidden="false"></i>
                 </button>
