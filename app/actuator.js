@@ -38,7 +38,7 @@ class Actuator extends Component {
 		// }
 	}
 	componentDidMount(){
-		debugger;
+		// debugger;
 	}
 
 	updateCode(newCode) {

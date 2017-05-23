@@ -133,3 +133,18 @@ nav .brand-logo {
     padding: 0;
     white-space: nowrap;*/
 }
+
+.b_edit {
+    width: 50px;
+    height: 40px;
+    padding-left: initial;
+    padding-right: initial;
+    margin-top: 10px;
+    background-color: #1dcaff;
+    /*color: #1dcaff;*/
+}
+
+.button:hover {
+    background-color: #1dcaff; /* Green */
+    color: #1dcaff;
+}

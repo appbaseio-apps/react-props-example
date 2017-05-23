@@ -27,7 +27,7 @@ class Edit extends Component {
         return (
             <div className="flexend">
                 <textarea className="reacttxt" type='text' ref={(i) => this.inputval = i} defaultValue={this.props.text} />
-                <button className="btn btn-success alr" onClick={this.saveEditedNote}>
+                <button className="btn btn-success alr b_edit" onClick={this.saveEditedNote}>
                     <i className="fa fa-floppy-o" aria-hidden="false"></i>
                 </button>
             </div>
@@ -38,7 +38,7 @@ class Edit extends Component {
         return (
             <div className="flexend">
                 <p className="reacttxt">{this.props.text}</p>
-                <button className="btn btn-success alr" onClick={this.editNote}>
+                <button className="btn btn-success b_edit .button:hover" onClick={this.editNote}>
                     <i className="fa fa-pencil" aria-hidden="true"></i>
                 </button>
             </div>
