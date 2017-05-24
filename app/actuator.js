@@ -3,7 +3,7 @@ import CodeMirror from 'react-codemirror';
 import {
 	ReactiveMap
 } from '@appbaseio/reactivemaps';
-import {Edit} from './edit';
+import { Edit } from './edit';
 
 class Actuator extends Component {
 
@@ -17,37 +17,51 @@ class Actuator extends Component {
 	updateCode(newCode) {
 		this.setState({
 			code: newCode,
-			path:this.props.path
+			path: this.props.path
 		});
 	}
 
 	render() {
 		// debugger;
+		let init_react = null;
 		if (this.props.path == '/' || this.props.path == '/1') {
-			// this.updateCode(`{"and": "LocationSensor"}`)
-			if( this.props.path !== this.state.path){
-				this.state = ({code: `{"and": "LocationSensor"}`})
+			if (this.props.path !== this.state.path) {
+				init_react = ({ code: `{"and": "LocationSensor"}` });
 			}
 		}
-		else if (this.props.path == '/2') {
-			// this.updateCode(`{"and": "CitySensor"}`)
-			if( this.props.path !== this.state.path){
-				this.state = ({code: `{"and": ["CitySensor","GuestSensor"],
-										"not": "TimeSensor"}`})
-			}
-		}
-		else if (this.props.path == '/3') {
-			// this.updateCode(`{"and": "GuestSensor"}`)
-			if( this.props.path !== this.state.path){
-				this.state = ({code: `{"or": ["GuestSensor","CitySensor"]}`})
-			}
 
+		else if (this.props.path == '/2') {
+			if (this.props.path !== this.state.path) {
+				init_react = ({
+					code: `{"and": "LocationSensor",
+							"not": "TimeSensor"}`});
+			}
 		}
+
+		else if (this.props.path == '/3') {
+			if (this.props.path !== this.state.path) {
+				init_react = ({
+					code: `{"and": ["GuestSensor", "CitySensor"],
+				            "or" : "LocationSensor"}`});
+			}
+		}
+
+		else if (this.props.path == '/4') {
+			if (this.props.path !== this.state.path) {
+				init_react = ({
+					code: `{"and": {
+                                "or": ["GuestSensor", "TimeSensor", "LocationSensor"],
+                                "not": "CitySensor"
+                            }}`});
+			}
+		}
+
+		this.state = init_react;
 
 		return (
 			<div>
 				<div className="row">
-					<div  key={this.state.code}>
+					<div key={this.state.code}>
 						<ReactiveMap
 							appbaseField="location"
 							setMarkerCluster={false}
@@ -67,16 +81,16 @@ class Actuator extends Component {
 
 					</div>
 				</div>
-				<div className="card thumbnail edit"  key={this.state.code}>
-						<label className="labelclass">react:</label>
-						<div className="tableclass">
+				<div className="card thumbnail edit" key={this.state.code}>
+					<label className="labelclass">react:</label>
+					<div className="tableclass">
 						<Edit
 							text={this.state.code}
 							onUpdate={this.updateCode}
-						/>
-              </div>
-              </div>
-              </div>
+							/>
+					</div>
+				</div>
+			</div>
 		);
 	}
 }

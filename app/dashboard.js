@@ -9,16 +9,30 @@ class Dashboard extends Component {
     let path = this.props.location.pathname;
     let sensor = null;
     if (path == '/' || path == '/1') {
-      sensor = <LocationSensor />
+      sensor = <div>
+        <LocationSensor />
+      </div>
     }
     else if (path == '/2') {
-      sensor = <TimeSensor />
+      sensor = <div>
+        <LocationSensor />
+        <TimeSensor />
+      </div>
     }
     else if (path == '/3') {
-      sensor = <CitySensor />
+      sensor = <div>
+        <LocationSensor />
+        <TimeSensor />
+        <CitySensor />
+      </div>
     }
     else if (path == '/4') {
-      sensor = <GuestSensor />
+      sensor = <div>
+        <LocationSensor />
+        <TimeSensor />
+        <CitySensor />
+        <GuestSensor />
+      </div>
     }
     return (
       <div className="row fixwindow">
