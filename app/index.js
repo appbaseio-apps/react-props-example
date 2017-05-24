@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Router, Route, browserHistory } from "react-router";
 import { ReactiveBase } from "@appbaseio/reactivemaps";
 import {config} from './config.js'
-import {Sensor} from './sensor.js'
+import {LocationSensor, CitySensor, GuestSensor, TimeSensor} from './sensor.js'
 import {Actuator} from './actuator.js'
 import {Dashboard} from './dashboard.js'
 class Main extends Component {
@@ -22,6 +22,7 @@ class Main extends Component {
               <Route path="/1" component={Dashboard} />
               <Route path="/2" component={Dashboard} />
               <Route path="/3" component={Dashboard} />
+              <Route path="/4" component={Dashboard} />
           </Router>
       </ReactiveBase>
       </div>
