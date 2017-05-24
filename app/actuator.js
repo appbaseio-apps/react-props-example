@@ -46,7 +46,7 @@ class Actuator extends Component {
 
 	render() {
 		// debugger;
-		if (this.props.path == '/' || this.props.path == '/1') {
+		if (this.props.path == '/react-props-example/' || this.props.path == '/react-props-example/1') {
 			// this.updateCode(`{"and": "LocationSensor"}`)
 			var obj = JSON.parse(`{"and": "LocationSensor"}`);
 			// debugger;
@@ -57,7 +57,7 @@ class Actuator extends Component {
 			// debugger;
 		}
 
-		else if (this.props.path == '/2') {
+		else if (this.props.path == '/react-props-example/2') {
 			// this.updateCode(`{"and": "CitySensor"}`)
 			let obj = JSON.parse(`{"and": "LocationSensor","not": "TimeSensor"}`);
 			let pretty = JSON.stringify(obj, undefined, 4);
@@ -66,7 +66,7 @@ class Actuator extends Component {
 			}
 		}
 
-		else if (this.props.path == '/3') {
+		else if (this.props.path == '/react-props-example/3') {
 			// this.updateCode(`{"and": "GuestSensor"}`)
 			let obj = JSON.parse(`{"and": ["GuestSensor", "CitySensor"],"or" : "LocationSensor"}`);
 			let pretty = JSON.stringify(obj, undefined, 4);
@@ -75,7 +75,7 @@ class Actuator extends Component {
 			}
 		}
 
-		else if (this.props.path == '/4') {
+		else if (this.props.path == '/react-props-example/4') {
 			let tp = `{
 						"or": ["GuestSensor", "TimeSensor"], "and": "LocationSensor","not": "CitySensor"}`;
 			let obj = JSON.parse(tp);

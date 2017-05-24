@@ -18,11 +18,11 @@ class Main extends Component {
       >
 
       <Router history={browserHistory}>
-              <Route path="/" component={Dashboard} />
-              <Route path="/1" component={Dashboard} />
-              <Route path="/2" component={Dashboard} />
-              <Route path="/3" component={Dashboard} />
-              <Route path="/4" component={Dashboard} />
+              <Route path="/react-props-example/" component={Dashboard} />
+              <Route path="/react-props-example/1" component={Dashboard} />
+              <Route path="/react-props-example/2" component={Dashboard} />
+              <Route path="/react-props-example/3" component={Dashboard} />
+              <Route path="/react-props-example/4" component={Dashboard} />
           </Router>
       </ReactiveBase>
       </div>
