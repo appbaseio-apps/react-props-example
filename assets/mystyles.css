@@ -11,9 +11,11 @@
 	display: block !important;
 	box-sizing: border-box;
     vertical-align: middle;
-    width: 100%;
-    height: 60px;
+    width: 525px;
+    height: 100px;
     margin-top: 15px;
+    font-family: "Lato Regular";
+    font-size: 16px;
 }
 .tabspace {
 	padding-left: 1.5em;
@@ -27,6 +29,10 @@
 	padding: 1% 1% 1% 2%;
 }
 
+.margin1 {
+	margin: 1%;
+    background-color: #1893e7;
+}
 
 strong {
 	font-weight: bold;
@@ -66,7 +72,8 @@ width: 259px;
 }
 
 .edit {
-	height: 100px;
+	height: 180px;
+	padding: 5px;
 }
 
 .reacttxt {
@@ -152,6 +159,10 @@ nav .brand-logo {
     margin-top: 10px;
     background-color: #1dcaff;
     /*color: #1dcaff;*/
+}
+
+.btn:hover, .btn-large:hover {
+    background-color: #1893e7;
 }
 
 .button:hover {

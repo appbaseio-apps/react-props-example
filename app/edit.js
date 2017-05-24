@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {CodeMirror}  from 'react-codemirror';
+
 
 class Edit extends Component {
     constructor(props) {
@@ -10,12 +12,6 @@ class Edit extends Component {
         this.saveEditedNote = this.saveEditedNote.bind(this);
         this.renderForm = this.renderForm.bind(this);
         this.renderText = this.renderText.bind(this);
-    }
-
-    editNote() {
-        this.setState({
-            editon: true
-        });
     }
 
     saveEditedNote() {
@@ -46,7 +42,16 @@ class Edit extends Component {
     }
 
     render() {
-        return (this.state.editon) ? this.renderForm() : this.renderText();
+        var options = {
+            lineNumbers: true,
+            readOnly: this.state.readOnly,
+            mode: this.state.mode
+        };
+        return (
+            <div>
+                <Codemirror ref="editor" value={this.state.code} onChange={this.updateCode} options={options} autoFocus={true} />
+            </div>
+            )
     }
 }
 
