@@ -51,6 +51,16 @@ code {
 	display: flex;
 }
 
+.fixheight {
+	height: 90vh;
+	overflow-y: scroll;
+	margin-top: 1%;
+}
+
+.fixwindow {
+	height: 100vh;
+}
+
 input.reacttxt {
 width: 259px;
 }

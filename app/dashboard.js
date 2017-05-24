@@ -8,7 +8,7 @@ class Dashboard extends Component {
   render() {
   // debugger;
     return (
-      <div className="row">
+      <div className="row fixwindow">
          <nav>
     <div className="nav-wrapper row grey lighten-3">
       <label className="brand-logo center">React Props Example</label>
@@ -21,17 +21,19 @@ class Dashboard extends Component {
       </ul>
     </div>
   </nav>
-      <div className="abrow">
-        <div className="col s4">
+   
+    <div className="col s4">
           <Sensor />
         </div>
-        <div className="col s6">
+     
+        
+        <div className="col s6 abrow">
           <Actuator
             path={this.props.location.pathname}
             />
         </div>
         </div>
-      </div>
+   
     );
   }
 }
