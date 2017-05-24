@@ -2,11 +2,21 @@ import React, { Component } from 'react';
 import { Router, Link, Route, browserHistory } from "react-router";
 import { ReactiveBase } from "@appbaseio/reactivemaps";
 import {config} from './config.js'
-import {Sensor} from './sensor.js'
+import {LocationSensor,CitySensor, GuestSensor, TimeSensor} from './sensor.js'
 import {Actuator} from './actuator.js'
 class Dashboard extends Component {
   render() {
-  // debugger;
+    let path = this.props.location.pathname;
+    let sensor = null;
+    if (path == '/' || path == '/1') {
+      sensor =  <LocationSensor />
+    }
+    else if (path == '/2') {
+      sensor = <TimeSensor />
+    }
+    else if (path == '/3') {
+      sensor = <CitySensor />
+    }
     return (
       <div className="row">
          <nav>
@@ -23,11 +33,11 @@ class Dashboard extends Component {
   </nav>
       <div className="abrow">
         <div className="col s4">
-          <Sensor />
+            {sensor}
         </div>
         <div className="col s6">
           <Actuator
-            path={this.props.location.pathname}
+            path={path}
             />
         </div>
         </div>

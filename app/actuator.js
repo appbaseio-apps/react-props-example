@@ -21,26 +21,6 @@ class Actuator extends Component {
 		// }
 	}
 
-	componentWillMount(){
-		// debugger;
-		// if (this.props.path == '/' || this.props.path == '/1') {
-		// 	// this.updateCode(`{"and": "LocationSensor"}`)
-		// 	this.state = ({code: `{"and": "LocationSensor"}`})
-		// }
-		// else if (this.props.path == '/2') {
-		// 	// this.updateCode(`{"and": "CitySensor"}`)
-		// 	this.state = ({code: `{"and": "CitySensor"}`})
-		// }
-		// else if (this.props.path == '/3') {
-		// 	// this.updateCode(`{"and": "GuestSensor"}`)
-		// 	this.state = ({code: `{"and": "GuestSensor"}`})
-
-		// }
-	}
-	componentDidMount(){
-		// debugger;
-	}
-
 	updateCode(newCode) {
 		this.setState({
 			code: newCode,
@@ -99,7 +79,7 @@ class Actuator extends Component {
 						<div className="tableclass">
 						<Edit
 							text={this.state.code}
-							onUpdate={this.updateCode} 
+							onUpdate={this.updateCode}
 						/>
               </div>
               </div>
