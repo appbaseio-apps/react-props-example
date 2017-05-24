@@ -64,7 +64,7 @@ let TimeSensor = () => {
 {/*class Sensor extends Component {
   render() {
     return (
-					<div>
+					<div className="fixheight">
 						<GeoDistanceDropdown
 							componentId="LocationSensor"
 							appbaseField="location"
