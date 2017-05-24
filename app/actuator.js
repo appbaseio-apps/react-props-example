@@ -20,8 +20,6 @@ class Actuator extends Component {
 		// 			this.state = ({code: `{"and": "GuestSensor"}`})
 		// }
 	}
-
-	
 	updateCode(newCode) {
 		this.setState({
 			code: newCode,
