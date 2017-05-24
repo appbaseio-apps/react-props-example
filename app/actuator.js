@@ -12,13 +12,6 @@ class Actuator extends Component {
 		this.updateCode = this.updateCode.bind(this);
 		// if(props.path == '/' || props.path =='/1'){
 		this.state = ({ code: `{"and": "TimeSensor"}` })
-		// }
-		// else if(props.path == '/2'){
-		// 			this.state = ({code: `{"and": "CitySensor"}`})
-		// }
-		// else if(props.path == '/3'){
-		// 			this.state = ({code: `{"and": "GuestSensor"}`})
-		// }
 	}
 
 	updateCode(newCode) {

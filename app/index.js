@@ -22,6 +22,7 @@ class Main extends Component {
               <Route path="/1" component={Dashboard} />
               <Route path="/2" component={Dashboard} />
               <Route path="/3" component={Dashboard} />
+              <Route path="/4" component={Dashboard} />
           </Router>
       </ReactiveBase>
       </div>
