@@ -3,7 +3,6 @@ import CodeMirror from 'react-codemirror';
 import {
 	ReactiveMap
 } from '@appbaseio/reactivemaps';
-import { Edit } from './edit';
 
 class Actuator extends Component {
 
@@ -13,7 +12,7 @@ class Actuator extends Component {
 		this.toggleReadOnly = this.toggleReadOnly.bind(this);
 		// if(props.path == '/' || props.path =='/1'){
 		this.state = {
-			path: this.props.path,
+			code:null,
 			newcode: null,
 			readOnly: true
 		}
@@ -47,16 +46,15 @@ class Actuator extends Component {
 
 	render() {
 		// debugger;
-		let init_react = null;
 		if (this.props.path == '/' || this.props.path == '/1') {
 			// this.updateCode(`{"and": "LocationSensor"}`)
 			var obj = JSON.parse(`{"and": "LocationSensor"}`);
-			debugger;
+			// debugger;
 			var pretty = JSON.stringify(obj, undefined, 4);
 			if( this.props.path !== this.state.path){
 				this.state = ({code:pretty, readOnly:true})
 			}
-			debugger;
+			// debugger;
 		}
 
 		else if (this.props.path == '/2') {
@@ -78,12 +76,10 @@ class Actuator extends Component {
 		}
 
 		else if (this.props.path == '/4') {
-			
-				
-			let obj = JSON.parse(`{"and": {
-                            "or": ["GuestSensor", "TimeSensor", "LocationSensor"],
-                            "not": "CitySensor"
-                        }}`);
+			let tp = `{
+						"or": ["GuestSensor", "TimeSensor"], "and": "LocationSensor","not": "CitySensor"}`;
+			let obj = JSON.parse(tp);
+			console.log(obj)
 			let pretty = JSON.stringify(obj, undefined, 4);
 			if( this.props.path !== this.state.path){
 				this.state = ({code:pretty, readOnly:true})
