@@ -8,25 +8,25 @@ class Dashboard extends Component {
   render() {
     let path = this.props.location.pathname;
     let sensor = null;
-    if (path == '/' || path == '/1') {
+    if (path == '/react-props-example/' || path == '/react-props-example/1') {
       sensor = <div>
         <LocationSensor />
       </div>
     }
-    else if (path == '/2') {
+    else if (path == '/react-props-example/2') {
       sensor = <div>
         <LocationSensor />
         <TimeSensor />
       </div>
     }
-    else if (path == '/3') {
+    else if (path == '/react-props-example/3') {
       sensor = <div>
         <LocationSensor />
         <TimeSensor />
         <CitySensor />
       </div>
     }
-    else if (path == '/4') {
+    else if (path == '/react-props-example/4') {
       sensor = <div>
         <LocationSensor />
         <TimeSensor />
@@ -41,10 +41,10 @@ class Dashboard extends Component {
             <label className="brand-logo center">React Props Example</label>
             <ul id="nav-mobile" className="left hide-on-med-and-down">
 
-              <li><Link to={"/1"}>Example1</Link></li>
-              <li><Link to={"/2"}>Example2</Link></li>
-              <li><Link to={"/3"}>Example3</Link></li>
-              <li><Link to={"/4"}>Example4</Link></li>
+              <li><Link to={"/react-props-example/1"}>Example1</Link></li> 
+              <li><Link to={"/react-props-example/2"}>Example2</Link></li>
+              <li><Link to={"/react-props-example/3"}>Example3</Link></li>
+              <li><Link to={"/react-props-example/4"}>Example4</Link></li>
 
             </ul>
           </div>
