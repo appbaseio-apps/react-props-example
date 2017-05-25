@@ -9,11 +9,45 @@ import {
   DateRange,
 } from '@appbaseio/reactivemaps';
 
+let location_title = () => {
+    return (<div className="row">
+        <div className="col s19">
+            <h4 className="rbc-title"> LocationSensor </h4>
+        </div>
+        <div className="col s3">
+          <div className="col">
+						  <a className="btn-floating btn-large waves-effect waves-light #fafafa grey lighten-6" href="#modal1"><i className="fa fa-code" aria-hidden="true"></i>
+</a>
+					</div>
+				</div>
+				<div id="modal1" className="modal">
+					<div className="modal-content">
+						<h4>Modal Header</h4>
+						<p>A bunch of text</p>
+					</div>
+					<div className="modal-footer">
+						<a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+					</div>
+        </div>
+    </div>);
+}
+
+let city_title = () => {
+  
+}
+
+let guest_title = () => {
+  
+}
+
+let time_title = () => {
+  
+}
 let LocationSensor = () => {
   return (<GeoDistanceDropdown
     componentId="LocationSensor"
     appbaseField="location"
-    title="LocationSensor"
+    title={location_title()}
     unit="mi"
     data={
         [
@@ -33,7 +67,7 @@ let CitySensor = () => {
   return (<DataSearch
     componentId="CitySensor"
     appbaseField="group.group_city"
-    title="CitySensor"
+    title={location_title()}
     placeholder="Search for cities"
     autocomplete={true}
     highlight={false}

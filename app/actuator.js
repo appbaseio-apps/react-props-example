@@ -4,6 +4,31 @@ import {
 	ReactiveMap
 } from '@appbaseio/reactivemaps';
 
+let location_title = () => {
+    return (<div className="row">
+        <div className="col s8">
+            <h4 className="rbc-title"> LocationSensor </h4>
+        </div>
+        <div className="col s4">
+          <div className="col">
+						  <a className="btn-floating btn-large waves-effect waves-light #2196f3 blue" href="#modal1"><i className="fa fa-code" aria-hidden="true"></i>
+</a>
+						<a className="waves-effect waves-light btn" href="#modal2">Modal</a>
+					</div>
+				</div>
+				<div id="modal1" className="modal">
+					<div className="modal-content">
+						<h4>Modal Header</h4>
+						<p>A bunch of text</p>
+					</div>
+					<div className="modal-footer">
+						<a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+					</div>
+        </div>
+    </div>);
+}
+
+
 class Actuator extends Component {
 
 	constructor(props) {
@@ -115,7 +140,7 @@ class Actuator extends Component {
 							size={1000}
 							showSearchAsMove={true}
 							showMapStyles={true}
-							title="ReactiveMaps"
+							title={location_title()}
 							defaultZoom={13}
 							react={JSON.parse(this.state.code)}
 							componentStyle={{
@@ -140,7 +165,9 @@ class Actuator extends Component {
 				</div>
 				<div className="row section">
 					<div className="col">
-						<a className="waves-effect waves-light btn" href="#modal1">Modal</a>
+				{/*}		<a className="waves-effect waves-light btn" href="#modal1">Modal</a> */}
+						  <a className="btn-floating btn-large waves-effect waves-light #2196f3 blue" href="#modal1"><i className="fa fa-code" aria-hidden="true"></i>
+</a>
 						<a className="waves-effect waves-light btn" href="#modal2">Modal</a>
 					</div>
 				</div>
