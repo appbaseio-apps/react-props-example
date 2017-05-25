@@ -44,12 +44,12 @@ let city_title = () => {
     </div>
     <div className="col s2">
       <div className="col">
-        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal1">
+        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal2">
           <i className="fa fa-code" aria-hidden="true"></i>
         </a>
       </div>
     </div>
-    <div id="modal1" className="modal">
+    <div id="modal2" className="modal">
       <div className="modal-content">
         <h4 className="rbc-title"> GeoDistanceDropdown </h4>
         <p>A GeoDistanceDropdown sensor component creates a location search based proximity slider UI widget. It is used for distance based filtering.</p>
@@ -72,12 +72,12 @@ let guest_title = () => {
     </div>
     <div className="col s2">
       <div className="col">
-        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal1">
+        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal3">
           <i className="fa fa-code" aria-hidden="true"></i>
         </a>
       </div>
     </div>
-    <div id="modal1" className="modal">
+    <div id="modal3" className="modal">
       <div className="modal-content">
         <h4 className="rbc-title"> GeoDistanceDropdown </h4>
         <p>A GeoDistanceDropdown sensor component creates a location search based proximity slider UI widget. It is used for distance based filtering.</p>
@@ -100,12 +100,12 @@ let time_title = () => {
     </div>
     <div className="col s2">
       <div className="col">
-        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal1">
+        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal4">
           <i className="fa fa-code" aria-hidden="true"></i>
         </a>
       </div>
     </div>
-    <div id="modal1" className="modal">
+    <div id="modal4" className="modal">
       <div className="modal-content">
         <h4 className="rbc-title"> GeoDistanceDropdown </h4>
         <p>A GeoDistanceDropdown sensor component creates a location search based proximity slider UI widget. It is used for distance based filtering.</p>
