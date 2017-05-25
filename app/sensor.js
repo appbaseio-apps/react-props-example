@@ -16,17 +16,22 @@ let location_title = () => {
     </div>
     <div className="col s2">
       <div className="col">
-        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal1"><i className="fa fa-code" aria-hidden="true"></i>
+        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal1">
+          <i className="fa fa-code" aria-hidden="true"></i>
         </a>
       </div>
     </div>
     <div id="modal1" className="modal">
       <div className="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+        <h4 className="rbc-title"> GeoDistanceDropdown </h4>
+        <p>A GeoDistanceDropdown sensor component creates a location search based proximity slider UI widget. It is used for distance based filtering.</p>
+
+        <p>Example uses:
+finding restaurants in walking distance from your location.
+discovering things to do near a landmark.</p>
       </div>
       <div className="modal-footer">
-        <a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        <a href="https://opensource.appbase.io/reactive-manual/v1.0.0/map-components/GeoDistanceDropdown.html" target="_blank" className=" modal-action modal-close waves-effect waves-green btn-flat">Learn more</a>
       </div>
     </div>
   </div>);
@@ -39,17 +44,22 @@ let city_title = () => {
     </div>
     <div className="col s2">
       <div className="col">
-        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal1"><i className="fa fa-code" aria-hidden="true"></i>
+        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal1">
+          <i className="fa fa-code" aria-hidden="true"></i>
         </a>
       </div>
     </div>
     <div id="modal1" className="modal">
       <div className="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+        <h4 className="rbc-title"> GeoDistanceDropdown </h4>
+        <p>A GeoDistanceDropdown sensor component creates a location search based proximity slider UI widget. It is used for distance based filtering.</p>
+
+        <p>Example uses:
+finding restaurants in walking distance from your location.
+discovering things to do near a landmark.</p>
       </div>
       <div className="modal-footer">
-        <a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        <a href="https://opensource.appbase.io/reactive-manual/v1.0.0/map-components/GeoDistanceDropdown.html" target="_blank" className=" modal-action modal-close waves-effect waves-green btn-flat">Learn more</a>
       </div>
     </div>
   </div>);
@@ -62,17 +72,22 @@ let guest_title = () => {
     </div>
     <div className="col s2">
       <div className="col">
-        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal1"><i className="fa fa-code" aria-hidden="true"></i>
+        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal1">
+          <i className="fa fa-code" aria-hidden="true"></i>
         </a>
       </div>
     </div>
     <div id="modal1" className="modal">
       <div className="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+        <h4 className="rbc-title"> GeoDistanceDropdown </h4>
+        <p>A GeoDistanceDropdown sensor component creates a location search based proximity slider UI widget. It is used for distance based filtering.</p>
+
+        <p>Example uses:
+finding restaurants in walking distance from your location.
+discovering things to do near a landmark.</p>
       </div>
       <div className="modal-footer">
-        <a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        <a href="https://opensource.appbase.io/reactive-manual/v1.0.0/map-components/GeoDistanceDropdown.html" target="_blank" className=" modal-action modal-close waves-effect waves-green btn-flat">Learn more</a>
       </div>
     </div>
   </div>);
@@ -85,17 +100,21 @@ let time_title = () => {
     </div>
     <div className="col s2">
       <div className="col">
-        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal1"><i className="fa fa-code" aria-hidden="true"></i>
+        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal1">
+          <i className="fa fa-code" aria-hidden="true"></i>
         </a>
       </div>
     </div>
     <div id="modal1" className="modal">
       <div className="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+        <h4 className="rbc-title"> GeoDistanceDropdown </h4>
+        <p>A GeoDistanceDropdown sensor component creates a location search based proximity slider UI widget. It is used for distance based filtering.</p>
+        <p>Example uses:
+finding restaurants in walking distance from your location.
+discovering things to do near a landmark.</p>
       </div>
       <div className="modal-footer">
-        <a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        <a href="https://opensource.appbase.io/reactive-manual/v1.0.0/map-components/GeoDistanceDropdown.html" target="_blank" className=" modal-action modal-close waves-effect waves-green btn-flat">Learn more</a>
       </div>
     </div>
   </div>);
