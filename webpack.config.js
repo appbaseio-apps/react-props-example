@@ -8,6 +8,14 @@ module.exports = {
 		filename: "bundle.js",
 		publicPath: "/dist/"
 	},
+	devServer: {
+		inline: true,
+		port: 8080,
+		contentBase: "./",
+		historyApiFallback: {
+			index: "./index.html"
+		}
+	},
 	module: {
 		rules: [
 			{
