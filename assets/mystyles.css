@@ -7,7 +7,7 @@
     display:none;
 }
 
-.rbc-blue .rbc .rbc-title {
+.rbc-title.col.s12.col-xs-12 {
 	height: 60px;
 }
 
@@ -82,6 +82,10 @@ width: 259px;
 
 .reacttxt {
 	width: 259px;
+}
+
+.rbc-title.col.s12.m8.col-xs-12.col-sm-8  {
+	height: 40px;
 }
 
 .labelclass {
