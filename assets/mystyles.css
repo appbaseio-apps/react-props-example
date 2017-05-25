@@ -103,6 +103,18 @@ width: 259px;
     font-weight: 600;
 }
 
+.fa.fa-info-circle.fa-1g {
+	line-height: 27px;
+	font-size: 25px;
+	vertical-align: top;
+}
+
+.info-btn {
+	width: 25px;
+    height: 25px;
+    margin-left: 14px;
+}
+
 .tableclass {
 	display: table-cell;
     box-sizing: border-box;
