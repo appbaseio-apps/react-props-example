@@ -11,9 +11,6 @@ class Dashboard extends Component {
     if (path == '/' || path == '/1') {
       sensor = <div>
         <LocationSensor />
-        <button>
-        <i className="fa fa-code" aria-hidden="true"></i>
-        </button>
       </div>
     }
     else if (path == '/2') {

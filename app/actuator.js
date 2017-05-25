@@ -69,16 +69,6 @@ class Actuator extends Component {
 		}, () => this.refs.editor.focus());
 	}
 
-	overlay() {
-		$(document).ready(function () {
-			// $("idd").click(function(){
-			$('#modal1').modal();
-			// console.log(2);
-			// });
-			// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered			
-		});
-	}
-
 	render() {
 		// debugger;
 		if (this.props.path == '/' || this.props.path == '/1') {
@@ -140,7 +130,7 @@ class Actuator extends Component {
 							size={1000}
 							showSearchAsMove={true}
 							showMapStyles={true}
-							title={location_title()}
+							title="Reactive Maps"
 							defaultZoom={13}
 							react={JSON.parse(this.state.code)}
 							componentStyle={{
@@ -161,32 +151,6 @@ class Actuator extends Component {
 							/>
 						<button className="waves-effect waves-light btn margin1" onClick={this.toggleReadOnly}>{this.state.readOnly ? 'Edit' : 'Save'}</button>
 
-					</div>
-				</div>
-				<div className="row section">
-					<div className="col">
-				{/*}		<a className="waves-effect waves-light btn" href="#modal1">Modal</a> */}
-						  <a className="btn-floating btn-large waves-effect waves-light #2196f3 blue" href="#modal1"><i className="fa fa-code" aria-hidden="true"></i>
-</a>
-						<a className="waves-effect waves-light btn" href="#modal2">Modal</a>
-					</div>
-				</div>
-				<div id="modal1" className="modal">
-					<div className="modal-content">
-						<h4>Modal Header</h4>
-						<p>A bunch of text</p>
-					</div>
-					<div className="modal-footer">
-						<a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-					</div>
-				</div>
-				<div id="modal2" className="modal">
-					<div className="modal-content">
-						<h4>Modal Header</h4>
-						<p>A bunch bhasdhsbdhsbdhsbd cory cory of text</p>
-					</div>
-					<div className="modal-footer">
-						<a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
 					</div>
 				</div>
 			</div>
