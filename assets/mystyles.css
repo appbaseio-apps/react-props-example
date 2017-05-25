@@ -7,6 +7,10 @@
     display:none;
 }
 
+.rbc-blue .rbc .rbc-title {
+	height: 60px;
+}
+
 .CodeMirror.cm-s-default {
 	display: block !important;
 	box-sizing: border-box;
