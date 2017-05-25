@@ -141,7 +141,28 @@ class Actuator extends Component {
 					</div>
 				</div>
 				<div className="card thumbnail edit" key={this.state.code + "" + this.state.readOnly}>
-					<label className="labelclass">react:</label>
+					
+					<div className="row labelclass">
+    <div className="col s2">
+      <label>React:</label>
+    </div>
+    <div className="col s2">
+      <div className="col">
+        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6 info-btn" href="#modal1">
+        <i className="fa fa-info-circle fa-1g" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <div id="modal1" className="modal">
+      <div className="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div className="modal-footer">
+        <a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+  </div>
 					<div className="tableclass">
 						<CodeMirror
 							ref="editor"
