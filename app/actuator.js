@@ -45,10 +45,12 @@ class Actuator extends Component {
 	}
 
 	overlay() {
-
 		$(document).ready(function () {
-			// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-			$('.modal').modal();
+			// $("idd").click(function(){
+			$('#modal1').modal();
+			// console.log(2);
+			// });
+			// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered			
 		});
 	}
 
@@ -138,15 +140,23 @@ class Actuator extends Component {
 				</div>
 				<div className="row section">
 					<div className="col">
-
-						<a className="waves-effect waves-light btn modal-trigger" href="#m" onClick={this.overlay}>Modal</a>
+						<a className="waves-effect waves-light btn" href="#modal1">Modal</a>
+						<a className="waves-effect waves-light btn" href="#modal2">Modal</a>
 					</div>
 				</div>
-
-				<div id="#m" className="modal">
+				<div id="modal1" className="modal">
 					<div className="modal-content">
 						<h4>Modal Header</h4>
 						<p>A bunch of text</p>
+					</div>
+					<div className="modal-footer">
+						<a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+					</div>
+				</div>
+				<div id="modal2" className="modal">
+					<div className="modal-content">
+						<h4>Modal Header</h4>
+						<p>A bunch bhasdhsbdhsbdhsbd cory cory of text</p>
 					</div>
 					<div className="modal-footer">
 						<a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
