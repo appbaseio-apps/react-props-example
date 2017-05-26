@@ -43,6 +43,11 @@ class Actuator extends Component {
 		}
 	}
 
+	closePopup(e){
+		e.preventDefault();
+		document.getElementById('info').style.display='none';
+	}
+
 	updateCode(newCode) {
 		this.setState({
 			newcode: newCode,
@@ -141,7 +146,31 @@ class Actuator extends Component {
 					</div>
 				</div>
 				<div className="card thumbnail edit" key={this.state.code + "" + this.state.readOnly}>
-					<label className="labelclass">react:</label>
+					
+					<div className="row labelclass">
+    <div className="col s2">
+      <label>React:</label>
+    </div>
+    <div className="col s2">
+      <div className="col">
+        <a className="info-btn" href="#info">
+        <i className="fa fa-info-circle fa-1g" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <div id="info" className="modal">
+    <a className=" modal-action modal-close closebutton" onClick={this.closePopup}>
+        <i className="fa fa-times-circle-o fa-1g" aria-hidden="true"></i>
+        </a>
+      <div className="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div className="modal-footer">
+        <a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+  </div>
 					<div className="tableclass">
 						<CodeMirror
 							ref="editor"
