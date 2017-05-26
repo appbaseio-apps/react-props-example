@@ -9,9 +9,13 @@ import {
   DateRange,
 } from '@appbaseio/reactivemaps';
 
+let close_button = (id) => {
+	return (
+		<a className="closebutton modal-action modal-close" onClick={()=>{document.getElementById(id).style.display='none';}}>
+        <i className="fa fa-times-circle-o fa-1g" aria-hidden="true"></i>
+        </a>
+		);
 
-let onLoad = () => {
-			document.getElementById("modal5").click();
 }
 
 let location_title = () => {
@@ -28,6 +32,7 @@ let location_title = () => {
       </div>
     </div>
     <div id="modal1" className="modal">
+    {close_button("modal1")}
       <div className="modal-content">
         <h4 className="rbc-title"> GeoDistanceDropdown </h4>
         <p>A GeoDistanceDropdown sensor component creates a location search based proximity slider UI widget. It is used for distance based filtering.</p>
@@ -55,6 +60,7 @@ let city_title = () => {
         </a>
       </div>
     </div>
+    
     <div id="modal4" className="modal">
       <div className="modal-content">
         <h4 className="rbc-title"> GeoDistanceDropdown </h4>

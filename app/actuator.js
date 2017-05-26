@@ -43,6 +43,11 @@ class Actuator extends Component {
 		}
 	}
 
+	closePopup(e){
+		e.preventDefault();
+		document.getElementById('info').style.display='none';
+	}
+
 	updateCode(newCode) {
 		this.setState({
 			newcode: newCode,
@@ -148,12 +153,15 @@ class Actuator extends Component {
     </div>
     <div className="col s2">
       <div className="col">
-        <a className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6 info-btn" href="#info">
+        <a className="info-btn" href="#info">
         <i className="fa fa-info-circle fa-1g" aria-hidden="true"></i>
         </a>
       </div>
     </div>
     <div id="info" className="modal">
+    <a className=" modal-action modal-close closebutton" onClick={this.closePopup}>
+        <i className="fa fa-times-circle-o fa-1g" aria-hidden="true"></i>
+        </a>
       <div className="modal-content">
         <h4>Modal Header</h4>
         <p>A bunch of text</p>
