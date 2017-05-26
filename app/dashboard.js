@@ -53,7 +53,7 @@ class Dashboard extends Component {
           {sensor}
         </div>
 
-        <div className="col s6 abrow">
+        <div className="col s7 abrow">
           <Actuator
             path={path}
             />
