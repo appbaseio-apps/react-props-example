@@ -23,7 +23,9 @@ class Dashboard extends Component {
       sensor = <div>
         <LocationSensor />
         <TimeSensor />
-        <CitySensor />
+
+        <GuestSensor />
+     {/*}   <CitySensor /> */}
       </div>
     }
     else if (path == '/4') {
@@ -45,7 +47,7 @@ class Dashboard extends Component {
               <li><Link to={"/2"}>Example2</Link></li>
               <li><Link to={"/3"}>Example3</Link></li>
               <li><Link to={"/4"}>Example4</Link></li>
-
+              
             </ul>
           </div>
         </nav>
