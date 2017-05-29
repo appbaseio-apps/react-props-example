@@ -23,8 +23,7 @@ class Dashboard extends Component {
       sensor = <div>
         <LocationSensor />
         <TimeSensor />
-
-        <GuestSensor />
+        <CitySensor />
      {/*}   <CitySensor /> */}
       </div>
     }
