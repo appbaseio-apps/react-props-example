@@ -24,6 +24,7 @@ class Dashboard extends Component {
         <LocationSensor />
         <TimeSensor />
         <CitySensor />
+     {/*}   <CitySensor /> */}
       </div>
     }
     else if (path == '/react-props-example/4') {
