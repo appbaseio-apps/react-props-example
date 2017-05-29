@@ -61,17 +61,28 @@ class Actuator extends Component {
 		// debugger;
 		let obj = "";
 		let pretty = this.state.code;
-		if (this.state.newcode != undefined) {
-			obj = JSON.parse(this.state.newcode);
-			pretty = JSON.stringify(obj, undefined, 4);
-		}
+		try {
+			if (this.state.newcode != undefined) {
+				obj = JSON.parse(this.state.newcode);
+				pretty = JSON.stringify(obj, undefined, 4);
+			}
 
-		// debugger;
-		this.setState({
-			code: pretty,
-			readOnly: !this.state.readOnly,
-			path: this.props.path
-		}, () => this.refs.editor.focus());
+			// debugger;
+			this.setState({
+				code: pretty,
+				readOnly: !this.state.readOnly,
+				path: this.props.path,
+				error: ""
+			}, () => this.refs.editor.focus());
+		}
+		catch(err){
+			this.setState({
+				code: this.state.code,
+				readOnly: this.state.readOnly,
+				path: this.props.path,
+				error: err.message
+			}, () => this.refs.editor.focus());
+		}
 	}
 
 	render() {
@@ -179,7 +190,7 @@ class Actuator extends Component {
 							options={options}
 							/>
 						<button className="waves-effect waves-light btn margin1" onClick={this.toggleReadOnly}>{this.state.readOnly ? 'Edit' : 'Save'}</button>
-
+						<label className="error">{this.state.error}</label>
 					</div>
 				</div>
 			</div>

@@ -103,6 +103,12 @@ width: 259px;
     font-weight: 600;
 }
 
+.error {
+	font-size: medium;
+    color: red;
+    font-family: inherit;
+}
+
 .fa.fa-info-circle.fa-1g {
 	line-height: 27px;
 	font-size: 19px;
