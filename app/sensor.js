@@ -25,7 +25,7 @@ let location_title = () => {
     </div>
     <div className="col s2">
       <div className="col">
-        <a id="er" className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal1">
+        <a id="onstart" className="btn-floating btn waves-effect waves-light #fafafa grey lighten-6" href="#modal1">
           <i className="fa fa-code" aria-hidden="true"></i>
         </a>
 
@@ -157,7 +157,7 @@ let CitySensor = () => {
   return (<DataSearch
     componentId="CitySensor"
     appbaseField="group.group_city"
-    title={location_title()}
+    title={city_title()}
     placeholder="Search for cities"
     autocomplete={true}
     highlight={false}
