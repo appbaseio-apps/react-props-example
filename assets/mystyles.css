@@ -109,10 +109,11 @@ width: 259px;
 	vertical-align: top;
 }
 
-.info-btn {
+.rbc-blue .info-btn {
 	width: 25px;
     height: 25px;
     margin-left: 22px;
+    color: #777;
 }
 
 .modal {
