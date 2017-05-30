@@ -16,9 +16,9 @@
 
 	<script>
 
-		$(document).ready(function () {
-			$('.modal').modal();
-		});
+		// $(document).ready(function () {
+		// 	$('.modal').modal();
+		// });
 
 		// $(window).on('load', function () {
 		// 	jQuery(function () {
@@ -29,6 +29,11 @@
 		$(window).click(function () {
 			$('.modal').modal();
 		});
+		// $(document).ready()
+		$(window).click(function(){
+			$('.tooltipped').tooltip({delay: 50,html: true});
+		});
+		     
 
 	</script>
 
