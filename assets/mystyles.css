@@ -102,6 +102,23 @@ width: 259px;
     text-transform: lowercase;
     font-weight: 600;
 }
+tr td{
+	margin-top: 0px;
+	padding-top: 0px;
+}
+.lowpadding {
+	/*background-color: #eff0f1;*/
+	/*border-style: solid;*/
+	/*border-color: black;*/
+	/*border-width: 10px;*/
+	text-align: left;
+	/*width: 300px;*/
+	/*height: 150px;*/
+	/*color: black;*/
+	word-wrap: normal;
+	margin:-15px -8px -10px -3px;
+	padding: 5px 5px 5px 5px;
+}
 
 .error {
 	font-size: medium;
