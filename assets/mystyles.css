@@ -219,3 +219,16 @@ nav .brand-logo {
     background-color: #1dcaff; /* Green */
     color: #1dcaff;
 }
+
+.intro {
+    float: right;
+    margin: 0 20px 10px 10px;
+}
+
+.intro:hover {
+    text-decoration: underline;
+}
+
+code {
+    white-space: pre;
+}
