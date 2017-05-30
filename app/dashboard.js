@@ -62,7 +62,8 @@ class Dashboard extends Component {
             {close_button("modal6")}
             <div className="modal-content">
               <h4 className="rbc-title"> New to react props? </h4>
-              <p><code>react</code> prop is available in components whose data view should reactively update when on or more dependent components change their states, e.g. <code>ReactiveMap</code>,  <code>ReactiveList</code>.</p>
+              <p><code>react</code> prop is available in components whose data view should reactively update when one or more dependent components change their states, e.g. <code>ReactiveMap</code>,  <code>ReactiveList</code>.</p>
+              <p>This app explains the use of <code>react</code> prop of <code>ReactiveBase</code>. It displays how <code>ReactiveMap</code> actuator component reacts to changes in the state of sensors. Four independent examples showcase different possible conjunctions <code>react</code> prop.</p>
             </div>
             <div className="modal-footer">
               <a href="https://opensource.appbase.io/reactive-manual/v1.0.0/map-components/GeoDistanceDropdown.html" target="_blank" className=" modal-action modal-close waves-effect waves-green btn-flat">Learn more</a>
