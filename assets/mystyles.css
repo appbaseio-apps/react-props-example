@@ -43,13 +43,7 @@ strong {
 }
 
 code {
-	padding: 0;
-    padding-top: .2em;
-    padding-bottom: .2em;
-    margin: 0;
-    font-size: 85%;
-    background-color: rgba(27,31,35,.05);
-    border-radius: 3px;
+	font-size: 15px;
 }
 
 .abrow {
@@ -101,6 +95,23 @@ width: 259px;
     color: rgb(68, 68, 68);
     text-transform: lowercase;
     font-weight: 600;
+}
+tr td{
+	margin-top: 0px;
+	padding-top: 0px;
+}
+.lowpadding {
+	/*background-color: #eff0f1;*/
+	/*border-style: solid;*/
+	/*border-color: black;*/
+	/*border-width: 10px;*/
+	text-align: left;
+	/*width: 300px;*/
+	/*height: 150px;*/
+	/*color: black;*/
+	word-wrap: normal;
+	margin:-15px -8px -10px -3px;
+	padding: 5px 5px 5px 5px;
 }
 
 .error {
@@ -218,4 +229,17 @@ nav .brand-logo {
 .button:hover {
     background-color: #1dcaff; /* Green */
     color: #1dcaff;
+}
+
+.intro {
+    float: right;
+    margin: 0 20px 10px 10px;
+}
+
+.intro:hover {
+    text-decoration: underline;
+}
+
+code {
+    white-space: pre;
 }

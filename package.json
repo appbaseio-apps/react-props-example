@@ -18,6 +18,7 @@
     "html-webpack-plugin": "^2.24.1",
     "npm-run-all": "^4.0.2",
     "react-codemirror": "^1.0.0",
+    "react-syntax-highlighter": "^5.6.2",
     "shebang-loader": "0.0.1",
     "webpack": "^2.3.3"
   },
