@@ -1,32 +1,30 @@
-import React, { Component } from 'react';
-import CodeMirror from 'react-codemirror';
+import React, { Component } from "react";
+import CodeMirror from "react-codemirror";
 import {
 	ReactiveMap
-} from '@appbaseio/reactivemaps';
+} from "@appbaseio/reactivemaps";
 
-let location_title = () => {
-    return (<div className="row">
-        <div className="col s8">
-            <h4 className="rbc-title"> LocationSensor </h4>
-        </div>
-        <div className="col s4">
-          <div className="col">
-						  <a className="btn-floating btn-large waves-effect waves-light #2196f3 blue" href="#modal1"><i className="fa fa-code" aria-hidden="true"></i>
-</a>
-						<a className="waves-effect waves-light btn" href="#modal2">Modal</a>
-					</div>
-				</div>
-				<div id="modal1" className="modal">
-					<div className="modal-content">
-						<h4>Modal Header</h4>
-						<p>A bunch of text</p>
-					</div>
-					<div className="modal-footer">
-						<a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-					</div>
-        </div>
+const location_title = () => (<div className="row">
+	<div className="col s8">
+		<h4 className="rbc-title"> LocationSensor </h4>
+	</div>
+	<div className="col s4">
+		<div className="col">
+			<a className="btn-floating btn-large waves-effect waves-light #2196f3 blue" href="#modal1"><i className="fa fa-code" aria-hidden="true" />
+			</a>
+			<a className="waves-effect waves-light btn" href="#modal2">Modal</a>
+		</div>
+	</div>
+	<div id="modal1" className="modal">
+		<div className="modal-content">
+			<h4>Modal Header</h4>
+			<p>A bunch of text</p>
+		</div>
+		<div className="modal-footer">
+			<a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+		</div>
+	</div>
     </div>);
-}
 
 
 class Actuator extends Component {
@@ -40,12 +38,12 @@ class Actuator extends Component {
 			code: null,
 			newcode: null,
 			readOnly: true
-		}
+		};
 	}
 
-	closePopup(e){
+	closePopup(e) {
 		e.preventDefault();
-		document.getElementById('info').style.display='none';
+		document.getElementById("info").style.display = "none";
 	}
 
 	updateCode(newCode) {
@@ -74,8 +72,7 @@ class Actuator extends Component {
 				path: this.props.path,
 				error: ""
 			}, () => this.refs.editor.focus());
-		}
-		catch(err){
+		}		catch (err) {
 			this.setState({
 				code: this.state.code,
 				readOnly: this.state.readOnly,
@@ -87,53 +84,46 @@ class Actuator extends Component {
 
 	render() {
 		// debugger;
-		if (this.props.path == '/react-props-example/' || this.props.path == '/react-props-example/1') {
+		if (this.props.path == "/react-props-example/" || this.props.path == "/react-props-example/1") {
 			// this.updateCode(`{"and": "LocationSensor"}`)
-			var obj = JSON.parse(`{"and": "LocationSensor"}`);
+			const obj = JSON.parse("{\"and\": \"LocationSensor\"}");
 			// debugger;
-			var pretty = JSON.stringify(obj, undefined, 4);
+			const pretty = JSON.stringify(obj, undefined, 4);
 			if (this.props.path !== this.state.path) {
-				this.state = ({ code: pretty, readOnly: true })
+				this.state = ({ code: pretty, readOnly: true });
 			}
 			// debugger;
-		}
-
-		else if (this.props.path == '/react-props-example/2') {
+		}		else if (this.props.path == "/react-props-example/2") {
 			// this.updateCode(`{"and": "CitySensor"}`)
-			let obj = JSON.parse(`{"and": "LocationSensor","not": "TimeSensor"}`);
-			let pretty = JSON.stringify(obj, undefined, 4);
+			const obj = JSON.parse("{\"and\": \"LocationSensor\",\"not\": \"TimeSensor\"}");
+			const pretty = JSON.stringify(obj, undefined, 4);
 			if (this.props.path !== this.state.path) {
-				this.state = ({ code: pretty, readOnly: true })
+				this.state = ({ code: pretty, readOnly: true });
 			}
-		}
-
-		else if (this.props.path == '/react-props-example/3') {
+		}		else if (this.props.path == "/react-props-example/3") {
 			// this.updateCode(`{"and": "GuestSensor"}`)
-			let obj = JSON.parse(`{"and": ["GuestSensor", "CitySensor"],"or" : "LocationSensor"}`);
-			let pretty = JSON.stringify(obj, undefined, 4);
+			const obj = JSON.parse("{\"and\": [\"GuestSensor\", \"CitySensor\"],\"or\" : \"LocationSensor\"}");
+			const pretty = JSON.stringify(obj, undefined, 4);
 			if (this.props.path !== this.state.path) {
-				this.state = ({ code: pretty, readOnly: true })
+				this.state = ({ code: pretty, readOnly: true });
 			}
-		}
-
-		else if (this.props.path == '/react-props-example/4') {
-			let tp = `{
+		}		else if (this.props.path == "/react-props-example/4") {
+			const tp = `{
 						"or": ["GuestSensor", "TimeSensor"], "and": "LocationSensor","not": "CitySensor"}`;
-			let obj = JSON.parse(tp);
-			console.log(obj)
-			let pretty = JSON.stringify(obj, undefined, 4);
+			const obj = JSON.parse(tp);
+			console.log(obj);
+			const pretty = JSON.stringify(obj, undefined, 4);
 			if (this.props.path !== this.state.path) {
-				this.state = ({ code: pretty, readOnly: true })
+				this.state = ({ code: pretty, readOnly: true });
 			}
-
 		}
-		let options = {
+		const options = {
 			lineNumbers: false,
 			readOnly: this.state.readOnly,
 			mode: "javascript"
 		};
 
-		let tooltiptxt = `<div class="lowpadding">
+		const tooltiptxt = `<div class="lowpadding">
 			<h6><b>react:</b> <i>Object</i></h6>
 			<p><b>key:</b> <i>String </i><br />
 			&nbsp;&nbsp;&nbsp;&nbsp;Any of the three conjuction clause "and", "or" or "not".</p>
@@ -164,34 +154,34 @@ class Actuator extends Component {
 							defaultZoom={13}
 							react={JSON.parse(this.state.code)}
 							componentStyle={{
-								height: '450px'
+								height: "450px"
 							}}
-							/>
+						/>
 
 					</div>
 				</div>
-				<div className="card thumbnail edit" key={this.state.code + "" + this.state.readOnly}>
-					
+				<div className="card thumbnail edit" key={`${this.state.code}${this.state.readOnly}`}>
+
 					<div className="row labelclass">
-    <div className="col s2">
-      <label>React:</label>
-    </div>
-    <div className="col s2">
-      <div className="col">
-        <a className="info-btn tooltipped" data-position="right" data-delay="50" data-tooltip={tooltiptxt}>
-        <i className="fa fa-info-circle fa-1g" aria-hidden="true"></i>
-        </a>
-      </div>
-    </div>
-  </div>
+						<div className="col s2">
+							<label>React:</label>
+						</div>
+						<div className="col s2">
+							<div className="col">
+								<a className="info-btn tooltipped" data-position="right" data-delay="50" data-tooltip={tooltiptxt}>
+									<i className="fa fa-info-circle fa-1g" aria-hidden="true" />
+								</a>
+							</div>
+						</div>
+					</div>
 					<div className="tableclass">
 						<CodeMirror
 							ref="editor"
 							value={this.state.code}
 							onChange={this.updateCode}
 							options={options}
-							/>
-						<button className="waves-effect waves-light btn margin1" onClick={this.toggleReadOnly}>{this.state.readOnly ? 'Edit' : 'Save'}</button>
+						/>
+						<button className="waves-effect waves-light btn margin1" onClick={this.toggleReadOnly}>{this.state.readOnly ? "Edit" : "Save"}</button>
 						<label className="error">{this.state.error}</label>
 					</div>
 				</div>
