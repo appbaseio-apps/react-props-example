@@ -78,8 +78,21 @@ width: 259px;
 	width: 259px;
 }
 
+.maps-button {
+	left: 180px;
+    top: 2px;
+}
+
+.rbc.rbc-reactivemap .rbc-title {
+	left: 60px;
+    top: 5px;
+}
+
 .rbc-title.col.s12.m8.col-xs-12.col-sm-8  {
 	height: 40px;
+	background: none;
+	padding: 0;
+    box-shadow: none;
 }
 
 .labelclass {

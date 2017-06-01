@@ -1,7 +1,4 @@
-import React, {
-  Component
-} from "react";
-import CodeMirror from "react-codemirror";
+import React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
 import {
