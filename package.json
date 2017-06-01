@@ -26,10 +26,10 @@
     "webpack": "^2.3.3"
   },
   "dependencies": {
-    "@appbaseio/reactivemaps": "^1.0.0-alpha31",
+    "@appbaseio/reactivemaps": "^1.0.0-alpha33",
     "moment": "^2.18.1",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "react-router": "^2.8.1",
     "webpack-dev-server": "^2.4.2"
   }
