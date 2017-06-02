@@ -7,30 +7,74 @@ import {
 
 const map_overlay_render = () => {
 	const code = `<ReactiveMap
-	appbaseField="location"
-	setMarkerCluster={false}
-	defaultMapStyle="Blue Water"
-	popoverTTL={3}
-	autoCenter={true}
-	size={1000}
-	showSearchAsMove={true}
-	showMapStyles={true}
-	title={<div>Buraah!</div>}
-	defaultZoom={13}
-	react={JSON.parse(this.state.code)}
-	componentStyle={{
-		height: "450px"
-	}}
-/>`;
+    componentId="ReactiveMapActuator"
+    appbaseField="location"
+    title="ReactiveMap"
+
+    size={100}
+    defaultZoom={13}
+    defaultCenter={{ lat: 37.74, lon: -122.45 }}
+
+    showMapStyles={true}
+    defaultMapStyle="Standard"
+    showMarkers={true}
+    defaultMarkerImage="path/to/marker.png"
+    setMarkerCluster={true}
+    showSearchAsMove={true}
+    setSearchAsMove={true}
+    showPopoverOn="click"
+    onPopoverTrigger={this.onPopoverTrigger}
+    popoverTTL={3}
+
+    stream={true}
+    streamTTL={5}
+    streamAutoCenter={true}
+    streamMarkerImage="path/to/streaming/marker.png"
+
+    // 'react' defines when and how the map component should update
+    react={{
+      and: "CitySensor"
+    }}
+
+    // map events
+    onData={this.onData}
+    onIdle={this.onIdle}
+    onMouseover={this.onMouseover}
+    onMouseout={this.onMouseout}
+    onClick={this.onClick}
+    onDblclick={this.onDblclick}
+    onDrag={this.onDrag}
+    onDragstart={this.onDragstart}
+    onDragend={this.onDragend}
+    onMousemove={this.onMousemove}
+    onMouseout={this.onMouseout}
+    onMouseover={this.onMouseover}
+    onResize={this.onResize}
+    onRightclick={this.onRightclick}
+    onBoundsChanged={this.onBoundsChanged}
+    onCenterChanged={this.onCenterChanged}
+    onProjectionChanged={this.onProjectionChanged}
+    onTiltChanged={this.onTiltChanged}
+    onZoomChanged={this.onZoomChanged}
+
+    // less useful props
+    autoMapRender={true}
+    autoCenter={true}
+    autoMarkerPosition={true}
+    componentStyle={{
+      height: '700px';
+    }}
+/>
+`;
 	return (<div id="modalmap" className="modal">
 		{close_button("modalmap")}
 		<div className="modal-content">
 			<h4 className="rbc-title"> ReactiveMap </h4>
-			<p >A <code>DateRange</code> sensor component creates a calendar view based UI widget. It is used for filtering results by a date like property.</p>
+			<p>A <code>ReactiveMap</code> actuator component creates a map UI widget. It is the key component for building map based experiences.</p>
 			<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>
 		</div>
 		<div className="modal-footer">
-			<a href="https://opensource.appbase.io/reactive-manual/v1.0.0/components/DateRange.html" target="_blank" className=" modal-action modal-close waves-effect waves-green btn-flat">Learn more</a>
+			<a href="https://opensource.appbase.io/reactive-manual/v1.0.0/map-components/ReactiveMap.html" target="_blank" className=" modal-action modal-close waves-effect waves-green btn-flat">Learn more</a>
 		</div>
 	</div>);
 };
