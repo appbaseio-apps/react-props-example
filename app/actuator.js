@@ -173,7 +173,6 @@ class Actuator extends Component {
 				this.state = ({ code: pretty, readOnly: true });
 			}
 		}		else if (this.props.path == "/react-props-example/3") {
-			// this.updateCode(`{"and": "GuestSensor"}`)
 			const obj = JSON.parse("{\"and\": [\"GuestSensor\", \"CitySensor\"],\"or\" : \"LocationSensor\"}");
 			const pretty = JSON.stringify(obj, undefined, 4);
 			if (this.props.path !== this.state.path) {
