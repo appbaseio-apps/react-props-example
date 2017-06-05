@@ -33,7 +33,7 @@ const map_overlay_render = () => {
 
     // 'react' defines when and how the map component should update
     react={{
-      and: "CitySensor"
+      and: "EventSensor"
     }}
 
     // map events
@@ -167,7 +167,6 @@ class Actuator extends Component {
 			}
 			// debugger;
 		}		else if (this.props.path == "/2") {
-			// this.updateCode(`{"and": "CitySensor"}`)
 			const obj = JSON.parse("{\"and\": \"LocationSensor\",\"not\": \"TimeSensor\"}");
 			const pretty = JSON.stringify(obj, undefined, 4);
 			if (this.props.path !== this.state.path) {
@@ -175,14 +174,14 @@ class Actuator extends Component {
 			}
 		}		else if (this.props.path == "/3") {
 			// this.updateCode(`{"and": "GuestSensor"}`)
-			const obj = JSON.parse("{\"and\": [\"GuestSensor\", \"CitySensor\"],\"or\" : \"LocationSensor\"}");
+			const obj = JSON.parse("{\"and\": [\"GuestSensor\", \"EventSensor\"],\"or\" : \"LocationSensor\"}");
 			const pretty = JSON.stringify(obj, undefined, 4);
 			if (this.props.path !== this.state.path) {
 				this.state = ({ code: pretty, readOnly: true });
 			}
 		}		else if (this.props.path == "/4") {
 			const tp = `{
-						"or": ["GuestSensor", "TimeSensor"], "and": "LocationSensor","not": "CitySensor"}`;
+						"or": ["GuestSensor", "TimeSensor"], "and": "LocationSensor","not": "EventSensor"}`;
 			const obj = JSON.parse(tp);
 			const pretty = JSON.stringify(obj, undefined, 4);
 			if (this.props.path !== this.state.path) {

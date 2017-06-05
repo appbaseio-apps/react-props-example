@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router";
-import { LocationSensor, CitySensor, GuestSensor, TimeSensor } from "./sensor";
+import { LocationSensor, EventSensor, GuestSensor, TimeSensor } from "./sensor";
 import { Actuator } from "./actuator";
 
 const close_button = id => (
@@ -26,13 +26,13 @@ class Dashboard extends Component {
 			sensor = (<div>
 				<LocationSensor />
 				<TimeSensor />
-				<CitySensor />
+				<EventSensor />
 			</div>);
 		} else if (path == "/4") {
 			sensor = (<div>
 				<LocationSensor />
 				<TimeSensor />
-				<CitySensor />
+				<EventSensor />
 				<GuestSensor />
 			</div>);
 		}
