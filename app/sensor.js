@@ -41,11 +41,11 @@ const location_overlay_render = () => {
 	</div>);
 };
 
-const city_overlay_render = () => {
+const event_overlay_render = () => {
 	const code = `<DataSearch
-    componentId="CitySensor"
-    appbaseField="group.group_city"
-    title={city_title()}
+    componentId="EventSensor"
+    appbaseField="event.event_name"
+    title={event_title()}
     placeholder="Search for cities"
     autocomplete={true}
     highlight={false}
@@ -125,10 +125,10 @@ const location_title = () => (<div className="row">
 	</div>
   </div>);
 
-const city_title = () => (<div className="row">
+const event_title = () => (<div className="row">
 
 	<div className="col s10">
-		<h4 className="rbc-title"> CitySensor </h4>
+		<h4 className="rbc-title"> EventSensor </h4>
 	</div>
 	<div className="col s2">
 		<div className="col">
@@ -187,16 +187,16 @@ const LocationSensor = () => (
 		{location_overlay_render()}
 	</div>);
 
-const CitySensor = () => (
+const EventSensor = () => (
 	<div><DataSearch
-		componentId="CitySensor"
-		appbaseField="group.group_city"
-		title={city_title()}
+		componentId="EventSensor"
+		appbaseField="event.event_name"
+		title={event_title()}
 		placeholder="Search for cities"
 		autocomplete={true}
 		highlight={false}
 	/>
-		{city_overlay_render()}
+		{event_overlay_render()}
 	</div>);
 
 const GuestSensor = () => (
@@ -225,7 +225,7 @@ const TimeSensor = () => (
 	</div>);
 
 module.exports = { LocationSensor,
-	CitySensor,
+	EventSensor,
 	GuestSensor,
 	TimeSensor
 };
