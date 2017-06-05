@@ -192,7 +192,7 @@ const EventSensor = () => (
 		componentId="EventSensor"
 		appbaseField="event.event_name"
 		title={event_title()}
-		placeholder="Search for cities"
+		placeholder="Search for events"
 		autocomplete={true}
 		highlight={false}
 	/>
