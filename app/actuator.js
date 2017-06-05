@@ -105,7 +105,6 @@ class Actuator extends Component {
 		super(props);
 		this.updateCode = this.updateCode.bind(this);
 		this.toggleReadOnly = this.toggleReadOnly.bind(this);
-		// if(props.path == '/' || props.path =='/1'){
 		this.state = {
 			code: null,
 			newcode: null,
@@ -119,7 +118,6 @@ class Actuator extends Component {
 	}
 
 	updateCode(newCode) {
-		// debugger;
 		this.setState({
 			newcode: newCode,
 			path: this.props.path,
@@ -129,7 +127,6 @@ class Actuator extends Component {
 	}
 
 	toggleReadOnly() {
-		// debugger;
 		let obj = "";
 		let pretty = this.state.code;
 		try {
@@ -138,7 +135,6 @@ class Actuator extends Component {
 				pretty = JSON.stringify(obj, undefined, 4);
 			}
 
-			// debugger;
 			this.setState({
 				code: pretty,
 				readOnly: !this.state.readOnly,
@@ -156,16 +152,12 @@ class Actuator extends Component {
 	}
 
 	render() {
-		// debugger;
 		if (this.props.path == "/" || this.props.path == "/1") {
-			// this.updateCode(`{"and": "LocationSensor"}`)
 			const obj = JSON.parse("{\"and\": \"LocationSensor\"}");
-			// debugger;
 			const pretty = JSON.stringify(obj, undefined, 4);
 			if (this.props.path !== this.state.path) {
 				this.state = ({ code: pretty, readOnly: true });
 			}
-			// debugger;
 		}		else if (this.props.path == "/2") {
 			const obj = JSON.parse("{\"and\": \"LocationSensor\",\"not\": \"TimeSensor\"}");
 			const pretty = JSON.stringify(obj, undefined, 4);
@@ -173,7 +165,6 @@ class Actuator extends Component {
 				this.state = ({ code: pretty, readOnly: true });
 			}
 		}		else if (this.props.path == "/3") {
-			// this.updateCode(`{"and": "GuestSensor"}`)
 			const obj = JSON.parse("{\"and\": [\"TimeSensor\", \"EventSensor\"],\"or\" : \"LocationSensor\"}");
 			const pretty = JSON.stringify(obj, undefined, 4);
 			if (this.props.path !== this.state.path) {

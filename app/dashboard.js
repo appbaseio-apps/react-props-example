@@ -64,7 +64,7 @@ class Dashboard extends Component {
 							<a href="https://opensource.appbase.io/reactive-manual/v1.0.0/map-components/GeoDistanceDropdown.html" target="_blank" className=" modal-action modal-close waves-effect waves-green btn-flat">Learn more</a>
 						</div>
 					</div>
-				</div >
+				</div>
 				<div className="col s4">
 					{sensor}
 				</div>
