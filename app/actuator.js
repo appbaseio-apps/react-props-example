@@ -126,6 +126,17 @@ class Actuator extends Component {
 		});
 	}
 
+	onPopoverTrigger(markerData) {
+		const marker = markerData._source;
+		return (
+			<div>
+				<span>event: </span>{marker.event.event_name}<br />
+				<span>guests: </span>{marker.guests}<br />
+				<span>time: </span>{marker.mtime}<br />
+			</div>
+		);
+	}
+
 	toggleReadOnly() {
 		let obj = "";
 		let pretty = this.state.code;
@@ -204,6 +215,7 @@ class Actuator extends Component {
 							title={map_title()}
 							defaultZoom={13}
 							react={JSON.parse(this.state.code)}
+							onPopoverTrigger={this.onPopoverTrigger}
 							componentStyle={{
 								height: "450px"
 							}}
