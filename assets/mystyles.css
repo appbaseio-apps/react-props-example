@@ -109,22 +109,62 @@ width: 259px;
     text-transform: lowercase;
     font-weight: 600;
 }
+
 tr td{
 	margin-top: 0px;
 	padding-top: 0px;
 }
-.lowpadding {
-	/*background-color: #eff0f1;*/
-	/*border-style: solid;*/
-	/*border-color: black;*/
-	/*border-width: 10px;*/
-	text-align: left;
-	/*width: 300px;*/
-	/*height: 150px;*/
-	/*color: black;*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 485px;
+    padding-left: 70%;
+    padding-top: 25%;
+    font-size: 15px;
+    font-family: "Lato Regular";
+    background-color: #555;
+    color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 100;
+    top: -98px;
+    left: 83px;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-radius: 4px;
+    font-weight: 100;
+    text-align: left;
 	word-wrap: normal;
-	margin:-15px -8px -10px -3px;
-	padding: 5px 5px 5px 5px;
+	background-color: #323232;
+	line-height: 120%;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -25px;
+    border-width: 5px;
+    border-style: solid;
+    color: #323232;
+    border-color: transparent black transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#toast-container {
+ 	right: 10%;
+    top: 35%;
 }
 
 .error {
