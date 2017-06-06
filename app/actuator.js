@@ -185,18 +185,7 @@ class Actuator extends Component {
 			mode: "javascript"
 		};
 
-		const tooltiptxt = `<div class="lowpadding">
-			<h6><b>react:</b> <i>Object</i></h6>
-			<p><b>key:</b> <i>String </i><br />
-			&nbsp;&nbsp;&nbsp;&nbsp;Any of the three conjuction clause "and", "or" or "not".</p>
-			<p><b>value:</b> <i>String</i> or <i>Arary</i> or <i>Object</i><br />
-			<table>
-			<tr><td>String:</td><td>specify a single component by its componentId.<br /></td></tr>
-			<tr><td>Array:</td><td>specify multiple components by their componentId.<br /></td></tr>
-			<tr><td>Object</td><td>nesting other key clauses.<br /></td></tr>
-			</table>
-			</p>
-		</div>
+		const tooltiptxt = `
 		`;
 
 		return (
@@ -230,8 +219,22 @@ class Actuator extends Component {
 						</div>
 						<div className="col s2">
 							<div className="col">
-								<a className="info-btn tooltipped" data-position="right" data-delay="50" data-tooltip={tooltiptxt}>
-									<i className="fa fa-info-circle fa-1g" aria-hidden="true" />
+								<a className="info-btn tooltip">
+									<i className="fa fa-info-circle fa-1g" aria-hidden="true"></i>
+									<span className="tooltiptext">
+										<div>
+			<h6><b>react:</b> <i>Object</i></h6>
+			<p><b>key:</b> <i>String </i><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;Any of the three conjuction clause "and", "or" or "not".</p>
+			<p><b>value:</b> <i>String</i> or <i>Arary</i> or <i>Object</i><br />
+			<table>
+			<tr><td>String:</td><td>specify a single component by its componentId.<br /></td></tr>
+			<tr><td>Array:</td><td>specify multiple components by their componentId.<br /></td></tr>
+			<tr><td>Object</td><td>nesting other key clauses.<br /></td></tr>
+			</table>
+			</p>
+		</div>
+									</span>
 								</a>
 							</div>
 						</div>
